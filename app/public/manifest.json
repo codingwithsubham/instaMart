@@ -1,6 +1,6 @@
 {
-  "short_name": "Tola",
-  "name": "Tola- Riding Partner",
+  "short_name": "instaMart",
+  "name": "instaMart - India's instant Household App",
   "icons": [
     {
       "src": "favicon.ico",
@@ -16,7 +16,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#fff",
+  "background_color": "#000000",
   "screenshots": [{
     "src": "logo.png",
     "type": "image/png",
