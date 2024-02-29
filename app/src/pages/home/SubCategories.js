@@ -1,16 +1,18 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { getSubCategoriesReturn } from '../../store/category/categoryEffects';
+import React, { Fragment, useState } from 'react';
+import { useSelector } from 'react-redux';
 import { getImagebyid } from '../../utils/imagebuilder';
 
 const Subcategory = ({ category, count }) => {
-  const clrs = ['bg-grn', 'bg-wt', 'bg-rd', 'bg-wt', 'bg-orng', 'bg-wt', 'bg-bl'];
-  const [subCat, setSubCat] = useState([]);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getSubCategoriesReturn(category?._id)).then((d) => setSubCat(d));
-  }, []);
+  const clrs = [
+    'bg-grn',
+    'bg-wt',
+    'bg-rd',
+    'bg-wt',
+    'bg-orng',
+    'bg-wt',
+    'bg-bl',
+  ];
+  const [subCat] = useState(category?.subcategories);
 
   return (
     <div className={`bg ${clrs[count]}`}>

@@ -1390,11 +1390,14 @@ h1.title {
 }
 
 .offers-holder {
-  width: 100%;
   display: flex;
   gap: 20px;
   overflow-x: scroll;
   overflow-y: hidden;
+  padding-left: 20px;
+  margin-left: -20px;
+  width: -webkit-fill-available;
+  margin-right: -15px;
 }
 
 .offers-holder::-webkit-scrollbar {
@@ -1425,6 +1428,7 @@ h1.title {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  color: #1a1a1a;
 }
 
 .cat-holder {
@@ -1515,7 +1519,11 @@ input.search-inpt:focus {
   }
 
   .cat-itm-home {
-    width: 15%;
+    width: 10%;
+  }
+
+  .cat-holder {
+    gap: 1%;
   }
 
   .offers-itm .img {

@@ -11,6 +11,8 @@ import Categories from '../pages/admin/categories/Categories';
 import SubCategories from '../pages/admin/subCategories/SubCategories';
 import Entry from '../pages/entry/Entry';
 import Search from '../pages/search/Search';
+import Products from '../pages/admin/products/Products';
+import ShopByCategory from '../pages/shop/ShopByCategory';
 
 const AppRoutes = () => {
   return (
@@ -22,6 +24,7 @@ const AppRoutes = () => {
         <Route exact path="/entry" element={<PrivateRoute component={Entry} />} />
         <Route exact path="/home" element={<PrivateRoute component={Home} />} />
         <Route exact path="/search" element={<PrivateRoute component={Search} />} />
+        <Route exact path="/home/shop-by-category" element={<PrivateRoute component={ShopByCategory} />} />
         <Route
           exact
           path="/dashboard"
@@ -36,6 +39,11 @@ const AppRoutes = () => {
           exact
           path="/sub-categories/:id"
           element={<PRAdmin component={SubCategories} />}
+        />
+        <Route
+          exact
+          path="/products"
+          element={<PRAdmin component={Products} />}
         />
         <Route path="*" element={<Fragment />} />
       </Routes>

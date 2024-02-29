@@ -24,7 +24,7 @@ router.post('/add', auth, async (req, res) => {
 
 router.get('/', auth, async (req, res) => {
   try {
-    const cats = await Category.find({});
+    const cats = await Category.find({}).populate('subcategories');
     return res.json(cats);
   } catch (error) {
     return res.status(500).json({ error: 'Server Error' });

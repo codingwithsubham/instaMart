@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const categorySlice = createSlice({
-  name: 'alert',
+  name: 'category',
   initialState: {
     categoryLoading: false,
     categories: [],

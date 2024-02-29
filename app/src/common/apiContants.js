@@ -19,4 +19,8 @@ module.exports = {
   GET_CATEGORY: '/category',
   ADD_SUB_CATEGORY: '/category/sub-category/add',
   GET_SUB_CATEGORY: '/category/sub-category',
+  ADD_PRODUCT: '/product/add',
+  GET_PRODUCT: '/product',
+  BY_CATEGORY: '/category/',
+  BY_SUB_CATEGORY: '/sub-category/'
 };
