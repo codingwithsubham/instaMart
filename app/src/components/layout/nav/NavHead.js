@@ -2,10 +2,12 @@ import React from 'react';
 import { translate } from '../../../language/lang';
 import { useDispatch } from 'react-redux';
 import { userLogout } from '../../../store/auth/authEffect';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const NavHead = ({ callback, openSideNav }) => {
   const dispatch = useDispatch();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
   return (
     <div className="nav-wrapper">
       <Link to="#" className="brand-logo">
@@ -14,14 +16,25 @@ const NavHead = ({ callback, openSideNav }) => {
           <b>{translate('mart')}</b>
         </div>
       </Link>
-      <Link
-        to="#"
-        data-target="mobile-demo"
-        className="sidenav-trigger"
-        onClick={() => callback(!openSideNav)}
-      >
-        <i className="material-icons">menu</i>
-      </Link>
+      {pathname === '/home' ? (
+        <Link
+          to="#"
+          data-target="mobile-demo"
+          className="sidenav-trigger"
+          onClick={() => callback(!openSideNav)}
+        >
+          <i className="material-icons">menu</i>
+        </Link>
+      ) : (
+        <Link
+          to="#"
+          data-target="mobile-demo"
+          className="sidenav-trigger"
+          onClick={() => navigate(-1)}
+        >
+          <i className="material-icons">arrow_back</i>
+        </Link>
+      )}
       <Link
         to="/"
         data-target="mobile-demo"

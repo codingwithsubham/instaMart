@@ -2,7 +2,7 @@ import React from 'react';
 import { getImagebyid } from '../../../utils/imagebuilder';
 import { Link } from 'react-router-dom';
 
-const CategoryItem = ({ itm, idx }) => {
+const ProductItem = ({ itm, idx }) => {
   return (
     <div className="cat-itm row" key={idx}>
       <div className="col s4 m4 l4">
@@ -28,4 +28,4 @@ const CategoryItem = ({ itm, idx }) => {
   );
 };
 
-export default CategoryItem;
+export default ProductItem;
