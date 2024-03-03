@@ -1494,7 +1494,7 @@ h1.title {
 
 input.search-inpt:focus {
   border-bottom: none !important;
-  border: 2px solid #4CAF50 !important;
+  border: 2px solid #4caf50 !important;
   box-shadow: none !important;
 }
 
@@ -1512,8 +1512,9 @@ input.search-inpt:focus {
 }
 
 img.shop-prdct {
-  border: 2px solid #4CAF50;
-  height: 80px 
+  border: 2px solid #4caf50;
+  height: 80px;
+  object-fit: contain;
 }
 
 .img-lbl {
@@ -1524,7 +1525,7 @@ img.shop-prdct {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #4CAF50;
+  background: #4caf50;
   color: #ffffff;
   border-radius: 4px;
   margin-left: 2px;
@@ -1541,6 +1542,7 @@ img.shop-prdct {
 
 .prdcts-wrap .cat-itm.row {
   height: 110px;
+  width: 100%;
 }
 
 .shp-prdct h1 {
@@ -1549,11 +1551,12 @@ img.shop-prdct {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  font-size: 14px;
 }
 
 p.offer-price {
   font-size: 20px;
-  color: #4CAF50;
+  color: #4caf50;
   margin: 0px;
 }
 
@@ -1572,10 +1575,10 @@ button.btn.add-to-cart {
   min-width: 60px;
   width: 77%;
   background: #fff;
-  color: #4CAF50 !important;
+  color: #4caf50 !important;
   font-weight: 600;
   border-radius: 4px;
-  border: 2px solid #4CAF50;
+  border: 2px solid #4caf50;
   min-height: 20px;
 }
 
@@ -1591,7 +1594,111 @@ button.btn.add-to-cart {
   height: 100px;
 }
 
+.sub-cat-toggle {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  flex-wrap: nowrap;
+  gap: 2%;
+}
+
+.sub-cat-tggl-itm {
+  width: 80px;
+  height: 105px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.sub-cat-tggl-itm.selected {
+  border-bottom: 5px solid #4caf5096;
+}
+
+.sub-cat-tggl-itm img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background: #4caf4f1f;
+  border-radius: 10px;
+  padding: 5px;
+  object-position: top;
+}
+
+.sub-cat-tggl-itm h5 {
+  font-size: 9px;
+  margin: 0px;
+  text-align: center;
+  width: 80px;
+  font-weight: 600;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  color: #1a1a1a;
+}
+
+.prdcts-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1%;
+}
+
+.category-bg {
+  width: -webkit-fill-available;
+  margin: -5px -5px 10px -5px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.category-bg h1 {
+  color: #fff;
+  font-size: 42px;
+  text-shadow: 0 0 5px black;
+}
+
+.Dairy.\&.Breakfast {
+  background-image: url('./static/others/brkfst.jpg');
+}
+
+.Chips.\&.Munchies {
+  background-image: url('./static/others/hot-n-spicy-wafer.jpg');
+}
+
+.Cold.Drink.\&.Juices {
+  background-image: url('./static/others/drinks.jpg');
+}
+
+.Instant.\&.Frozen.Foods {
+  background-image: url('./static/others/mgie.jpg');
+}
+
+.Tea\,.Coffee.\&.Health.Drinks {
+  background-image: url('./static/others/teaCofee.jpg');
+}
+
+.Bakery.\&.Biscuits {
+  background-image: url('./static/others/bscut.jpg');
+}
+
+.Atta\,.Rice.\&.Dal {
+  background-image: url('./static/others/rice.jpg');
+}
+
+.Masala.\&.Oil {
+  background-image: url('./static/others/masala_bg.jpg');
+}
+
 @media only screen and (min-width: 768px) {
+  .prdcts-wrap .cat-itm.row {
+    width: 49%;
+  }
   .offers-itm {
     height: 300px;
     margin: 0px 0px 10px;

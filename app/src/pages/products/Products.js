@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const ProductItem = ({ itm }) => {
   return (
     <div className="cat-itm row">
-      <div className="col s4 m4 l4 img-center">
+      <div className="col s3 m3 l3 img-center">
         <img
           className="shop-prdct"
           src={getImagebyid(itm?.images[0])}
@@ -14,7 +14,7 @@ const ProductItem = ({ itm }) => {
         />
         <div className="img-lbl">{itm?.qty}</div>
       </div>
-      <div className="shp-prdct col s7 m7 l7">
+      <div className="shp-prdct col s8 m8 l8">
         <h1>{itm?.prodName}</h1>
         <div className="row prdct-btm">
           <div className="col s7 m7 l7">
@@ -28,7 +28,7 @@ const ProductItem = ({ itm }) => {
           </div>
           <div className="col s5 m5 l5 add-to-cart-wrap">
             <button className="btn add-to-cart">
-              add <i class="material-icons">add</i>
+              add <i className="material-icons">add</i>
             </button>
           </div>
         </div>
