@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { userLogout } from '../../../store/auth/authEffect';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { handleLanguageChange } from '../../../common/functions';
 
 const NavHead = ({ callback, openSideNav }) => {
   const dispatch = useDispatch();
   const { pathname } = useLocation();
   const navigate = useNavigate();
+
   return (
     <div className="nav-wrapper">
       <Link to="#" className="brand-logo">
@@ -34,12 +36,11 @@ const NavHead = ({ callback, openSideNav }) => {
           <i className="material-icons notranslate">arrow_back</i>
         </Link>
       )}
-      <Link
-        to="/"
-        data-target="mobile-demo"
-        className="notifications sidenav-trigger"
-      >
+      <Link to="/" className="notifications">
         <i className="material-icons notranslate">notifications</i>
+      </Link>
+      <Link to="/" className="notifications" onClick={() => handleLanguageChange()}>
+        <i className="material-icons notranslate">translate</i>
       </Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>

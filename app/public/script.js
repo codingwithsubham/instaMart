@@ -12,25 +12,23 @@ function readCookie(name) {
 }
 
 function translationCallback() {
-  // This function needs to be called when Google translates this web page.
-  var currentValue = document.getElementById('translationDetector').innerHTML;
-  if (currentValue && currentValue.indexOf(origValue) < 0) {
-    origValue = currentValue;
-    if (readCookie('googtrans') === '/en/bn') {
-      if (localStorage.getItem('lang') !== 'bn') {
-        localStorage.setItem('lang', 'bn');
-        window.dispatchEvent(new Event('storage'));
-      }
-    } else {
-      if (localStorage.getItem('lang') !== 'en') {
-        localStorage.setItem('lang', 'en');
-        window.dispatchEvent(new Event('storage'));
-      }
+  if (readCookie('googtrans') === '/en/bn') {
+    if (localStorage.getItem('lang') !== 'bn') {
+      localStorage.setItem('lang', 'bn');
+      window.dispatchEvent(new Event('storage'));
+    }
+  } else {
+    if (localStorage.getItem('lang') !== 'en') {
+      localStorage.setItem('lang', 'en');
+      window.dispatchEvent(new Event('storage'));
     }
   }
 }
 
 const googleTranslateElementInit = () => {
+  if(readCookie('googtrans') === undefined) {
+    setcookie('googtrans', `/en/${localStorage.getItem('lang')}`);
+  }
   new window.google.translate.TranslateElement(
     {
       pageLanguage: 'en',
@@ -46,11 +44,10 @@ document
   .getElementById('translationDetector')
   .addEventListener('DOMSubtreeModified', translationCallback, false);
 
-
-  var addScript = document.createElement('script');
-  addScript.setAttribute(
-    'src',
-    '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
-  );
-  document.body.appendChild(addScript);
-  window.googleTranslateElementInit = googleTranslateElementInit;
+var addScript = document.createElement('script');
+addScript.setAttribute(
+  'src',
+  '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit'
+);
+document.body.appendChild(addScript);
+window.googleTranslateElementInit = googleTranslateElementInit;
