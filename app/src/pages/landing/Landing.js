@@ -4,7 +4,6 @@ import { sliderData } from './options';
 import { Link, Navigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import LangElem from '../../language/LangElem';
-import { translate } from '../../language/lang';
 
 const Landing = () => {
   const { isAuthenticated } = useSelector((state) => state.auth);
@@ -16,23 +15,23 @@ const Landing = () => {
   return (
     <div className="auth-wrap">
       <div className="idfy">
-        {translate('insta')}
-        <b>{translate('mart')}</b>
+        insta
+        <b>Mart</b>
       </div>
       <Slider data={sliderData} className="auth" />
       <div className="btn-grup insta-an">
         <Link className="waves-effect waves-light btn-large btn" to="/register">
-          <i className="material-icons left">email</i>
-          {translate('Sign Up with Email')}
+          <i className="material-icons left notranslate">email</i>
+          Sign Up with Email
         </Link>
         <Link className="waves-effect waves-light btn-large btn" to="/register">
-          <i className="material-icons left">phone_android</i>
-          {translate('Sign Up with Phone')}
+          <i className="material-icons left notranslate">phone_android</i>
+          Sign Up with Phone
         </Link>
         <div className="txt-w-btn">
-          {translate('Already have an Account')}{' '}
+          Already have an Account ?
           <Link className="btn-outlined" to="/login">
-            {translate('Login')}
+            Login
           </Link>
         </div>
       </div>

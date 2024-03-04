@@ -14,7 +14,7 @@ const Alert = () => {
           <div className="toast-content">
             <i className="fas fa-solid fa-check x"></i>
             <i
-              className={`material-icons ${
+              className={`material-icons notranslate ${
                 itm?.alertType === SUCCESS ? 'check' : 'cross'
               }`}
             >
@@ -25,7 +25,7 @@ const Alert = () => {
               <span className="text text-2">{itm?.msg}</span>
             </div>
           </div>
-          <i className="material-icons close" onClick={() => dispatch(removeAlert(itm?.id))}>clear</i>
+          <i className="material-icons close notranslate" onClick={() => dispatch(removeAlert(itm?.id))}>clear</i>
           <div className="c-progress active"></div>
         </div>
       ))}

@@ -1,18 +1,16 @@
-import { translate } from '../../language/lang';
-
 export const addCatData = {
-  btnText: translate('Next'),
+  btnText: 'Next',
   inputs: [
     {
       name: 'catName',
-      label: translate('Category Name'),
+      label: 'Category Name',
       icon: 'art_track',
       type: 'text',
       value: '',
     },
     {
       name: 'catDesc',
-      label: translate('Category Description'),
+      label: 'Category Description',
       icon: 'art_track',
       type: 'text',
       value: '',
@@ -21,18 +19,18 @@ export const addCatData = {
 };
 
 export const addSubCatData = {
-  btnText: translate('Next'),
+  btnText: 'Next',
   inputs: [
     {
       name: 'subCatName',
-      label: translate('Sub Category Name'),
+      label: 'Sub Category Name',
       icon: 'art_track',
       type: 'text',
       value: '',
     },
     {
       name: 'subCatDesc',
-      label: translate('Sub Category Description'),
+      label: 'Sub Category Description',
       icon: 'art_track',
       type: 'text',
       value: '',
@@ -41,32 +39,32 @@ export const addSubCatData = {
 };
 
 export const addProductData = {
-  btnText: translate('Next'),
+  btnText: 'Next',
   inputs: [
     {
       name: 'prodName',
-      label: translate('Product Name'),
+      label: 'Product Name',
       icon: 'art_track',
       type: 'text',
       value: '',
     },
     {
       name: 'qty',
-      label: translate('Product Quantity'),
+      label: 'Product Quantity',
       icon: 'art_track',
       type: 'text',
       value: '',
     },
     {
       name: 'mrp',
-      label: translate('MRP Price'),
+      label: 'MRP Price',
       icon: 'art_track',
       type: 'number',
       value: '',
     },
     {
       name: 'sellPrice',
-      label: translate('Offer Price'),
+      label: 'Offer Price',
       icon: 'art_track',
       type: 'number',
       value: '',
@@ -79,7 +77,7 @@ export const getCategory = (category) => {
   category?.map((itm) => options.push({ value: itm?._id, label: itm?.catName }));
   return {
     name: 'category',
-    placeholder: translate('Category Name'),
+    placeholder: 'Category Name',
     icon: 'art_track',
     type: 'select',
     options: options,
@@ -91,7 +89,7 @@ export const getSubCategory = (sub) => {
   sub?.map((itm) => options.push({ value: itm?._id, label: itm?.subCatName }));
   return {
     name: 'category',
-    placeholder: translate('Sub Category Name'),
+    placeholder: 'Sub Category Name',
     icon: 'art_track',
     type: 'select',
     options: options,

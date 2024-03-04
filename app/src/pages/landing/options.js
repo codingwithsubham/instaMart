@@ -1,19 +1,17 @@
-import { translate } from "../../language/lang";
-
 export const sliderData = [
   {
     img: 'smp1.jpg',
-    hdr: translate('slide header 1'),
-    desc: translate('slide desc 1'),
+    hdr: "Home Needs, a Click Away",
+    desc: "Over 10 Lacs people ordering grocery online everyday",
   },
   {
     img: 'smp2.jpg',
-    hdr: translate('slide header 2'),
-    desc: translate('slide desc 2'),
+    hdr: "Your Kitchen, Our Responsibility",
+    desc: "Over 50K+ orders deliverd in a month",
   },
   {
     img: 'smp3.jpg',
-    hdr: translate('slide header 3'),
-    desc: translate('slide desc 3'),
+    hdr: "Good food comes from Home's Kitchen",
+    desc: "Over 1k+ Homes are getting support everyday",
   },
 ];

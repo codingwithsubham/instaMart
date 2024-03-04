@@ -10,22 +10,22 @@ const SubNav = ({ user }) => {
           <>
             <li className="tab">
               <NavLink to="/dashboard">
-                <i className="material-icons">dashboard</i>
+                <i className="material-icons notranslate">dashboard</i>
               </NavLink>
             </li>
             <li className="tab">
               <NavLink to="/orders">
-                <i className="material-icons">store</i>
+                <i className="material-icons notranslate">store</i>
               </NavLink>
             </li>
             <li className="tab">
               <NavLink to="/categories">
-                <i className="material-icons">list</i>
+                <i className="material-icons notranslate">list</i>
               </NavLink>
             </li>
             <li className="tab">
               <NavLink to="/products">
-                <i className="material-icons">add_shopping_cart</i>
+                <i className="material-icons notranslate">add_shopping_cart</i>
               </NavLink>
             </li>
           </>
@@ -33,17 +33,17 @@ const SubNav = ({ user }) => {
           <>
             <li className="tab">
               <NavLink to="/home">
-                <i className="material-icons">shopping_basket</i>
+                <i className="material-icons notranslate">shopping_basket</i>
               </NavLink>
             </li>
             <li className="tab">
               <NavLink to="/search">
-                <i className="material-icons">search</i>
+                <i className="material-icons notranslate">search</i>
               </NavLink>
             </li>
             <li className="tab">
               <NavLink to="/account">
-                <i className="material-icons">person</i>
+                <i className="material-icons notranslate">person</i>
               </NavLink>
             </li>
           </>

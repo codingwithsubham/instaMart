@@ -1,7 +1,6 @@
 import React from 'react';
 import Loader from '../../components/layout/Loader';
 import { getImagebyid } from '../../utils/imagebuilder';
-import { Link } from 'react-router-dom';
 
 const ProductItem = ({ itm }) => {
   return (
@@ -21,14 +20,17 @@ const ProductItem = ({ itm }) => {
             {itm?.sellPrice && <p className="offer-price">₹{itm?.sellPrice}</p>}
             <p className="nrml-price">
               <b>₹{itm?.mrp}</b>
-              &nbsp;{parseInt(((parseInt(itm?.mrp) - parseInt(itm?.sellPrice)) * 100) /
-                parseInt(itm?.mrp))}
+              &nbsp;
+              {parseInt(
+                ((parseInt(itm?.mrp) - parseInt(itm?.sellPrice)) * 100) /
+                  parseInt(itm?.mrp)
+              )}
               % OFF
             </p>
           </div>
           <div className="col s5 m5 l5 add-to-cart-wrap">
-            <button className="btn add-to-cart">
-              add <i className="material-icons">add</i>
+            <button className="btn add-to-cart notranslate">
+              <i className="material-icons notranslate">add</i>
             </button>
           </div>
         </div>

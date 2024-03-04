@@ -108,7 +108,7 @@ const FileUploader = ({ callBack, options }) => {
       <div className="selected-photos">
         {imgSrc?.map((itm, idx) => (
           <div className="img-holder" key={idx}>
-            <i className="material-icons" onClick={() => clearImage(idx)}>
+            <i className="material-icons notranslate" onClick={() => clearImage(idx)}>
               clear
             </i>
             <img src={itm} alt={idx} />
@@ -124,7 +124,7 @@ const FileUploader = ({ callBack, options }) => {
             options?.btnText
           ) : (
             <span>
-              <i className="material-icons left">cloud_upload</i>Upload Now
+              <i className="material-icons left notranslate">cloud_upload</i>Upload Now
             </span>
           )}
         </button>

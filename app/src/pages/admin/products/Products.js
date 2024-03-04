@@ -30,11 +30,11 @@ const Products = () => {
           >
             {!showAdd ? (
               <>
-                Add New <i className="material-icons">add</i>
+                Add New <i className="material-icons notranslate">add</i>
               </>
             ) : (
               <>
-                Close <i className="material-icons">close</i>
+                Close <i className="material-icons notranslate">close</i>
               </>
             )}
           </h1>

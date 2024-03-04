@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store/store';
@@ -17,6 +17,11 @@ function App() {
     store.dispatch(loadUser());
     // connectSocket();
   }, []);
+  const [lang, setLang] = useState(localStorage.getItem('lang'));
+  
+  window.addEventListener('storage', () => {
+    setLang(localStorage.getItem('lang'));
+  });
 
   return (
     <Provider store={store}>
@@ -25,7 +30,7 @@ function App() {
           <div className="App insta-an">
             <div
               className={`main-content${
-                localStorage.getItem('lang') === 'bn' ? ' font-bn' : ' font-en'
+                lang === 'bn' ? ' font-bn' : ' font-en'
               }`}
             >
               <ScrollToTop />

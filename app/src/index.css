@@ -1,3 +1,26 @@
+body > .skiptranslate {
+  display: none;
+}
+
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+div#goog-gt-tt {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@media print {
+  #google_translate_element {
+    display: none;
+  }
+}
+
 .btn {
   border-radius: 40px;
   min-width: 100px;
@@ -65,7 +88,7 @@
 
 .insta-pulse {
   animation: pulse 0.9s ease-in infinite;
-  -webkit-animation: pulse 0.9s ease-in infinite; 
+  -webkit-animation: pulse 0.9s ease-in infinite;
 }
 
 @keyframes slide-right {
@@ -122,9 +145,13 @@
   }
 }
 
-@keyframes pulse{
-  25%  {transform: scale(0.9);}
-  75%  {transform: scale(1.1);}
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

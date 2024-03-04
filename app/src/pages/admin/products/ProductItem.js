@@ -17,10 +17,10 @@ const ProductItem = ({ itm, idx }) => {
         <p>MRP: {itm?.mrp} / <b>{itm?.sellPrice}</b></p> 
         <div className="actions">
           <Link className='grn'>
-            <i className="material-icons">edit</i> Edit
+            <i className="material-icons notranslate">edit</i> Edit
           </Link>
           <Link className='rd'>
-            <i className="material-icons">delete</i> Delete
+            <i className="material-icons notranslate">delete</i> Delete
           </Link>
         </div>
       </div>

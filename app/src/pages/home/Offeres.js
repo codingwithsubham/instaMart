@@ -8,7 +8,7 @@ const Offeres = () => {
           <div className="heading">Up to 30% off!</div>
           <div className="desc">Enjoy our big offers everyday</div>
           <div className="offr-action">
-            Shop now <i className="material-icons">keyboard_arrow_right</i>
+            Shop now <i className="material-icons notranslate">keyboard_arrow_right</i>
           </div>
         </div>
         <div className="img">
@@ -23,7 +23,7 @@ const Offeres = () => {
           <div className="heading">Up to 30% off!</div>
           <div className="desc">Enjoy our big offers everyday</div>
           <div className="offr-action">
-            Shop now <i className="material-icons">keyboard_arrow_right</i>
+            Shop now <i className="material-icons notranslate">keyboard_arrow_right</i>
           </div>
         </div>
         <div className="img">
@@ -38,7 +38,7 @@ const Offeres = () => {
           <div className="heading">Up to 30% off!</div>
           <div className="desc">Enjoy our big offers everyday</div>
           <div className="offr-action">
-            Shop now <i className="material-icons">keyboard_arrow_right</i>
+            Shop now <i className="material-icons notranslate">keyboard_arrow_right</i>
           </div>
         </div>
         <div className="img">

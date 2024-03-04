@@ -1,48 +1,46 @@
-import { translate } from "../../language/lang"
-
 export const loginFormData = {
-  btnText: translate('Login'),
+  btnText: 'Login',
   inputs: [
     {
       name: 'id',
-      label: translate('Mobile Number / Email Id'),
+      label: 'Mobile Number / Email Id',
       icon: 'phone',
       type: 'tel',
       value: '',
     },
     {
       name: 'pwd',
-      label: translate('Password'),
+      label: 'Password',
       icon: 'lock',
       type: 'password',
       value: '',
     },
-  ]
-}
+  ],
+};
 
 export const registerFormData = {
-  btnText: translate('Register Now'),
+  btnText: 'Register Now',
   inputs: [
     {
       name: 'id',
-      label: translate('Mobile Number / Email Id'),
+      label: 'Mobile Number / Email Id',
       icon: 'phone',
       type: 'tel',
       value: '',
     },
     {
       name: 'pwd',
-      label: translate('Password'),
+      label: 'Password',
       icon: 'lock',
       type: 'password',
       value: '',
     },
     {
       name: 'c-pwd',
-      label: translate('Confirm Password'),
+      label: 'Confirm Password',
       icon: 'lock',
       type: 'password',
       value: '',
     },
-  ]
-}
+  ],
+};

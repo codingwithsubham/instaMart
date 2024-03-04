@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { userRegistration } from '../../store/auth/authEffect';
 import Loader from '../../components/layout/Loader';
 import { connectSocket } from '../../utils/connectSocket';
-import { translate } from '../../language/lang';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -28,13 +27,13 @@ const Register = () => {
   return (
     <div className="login-wrap">
       <div className="idfy">
-        {translate('insta')}
-        <b>{translate('mart')}</b>
+        insta
+        <b>Mart</b>
       </div>
       <div className="form-holder insta-an">
         <div className="frm-hdr">
-          <h1>{translate("Let's a Fresh Start")}</h1>
-          <p>{translate('This can a start of Good Vibes')}</p>
+          <h1>Let's a Fresh Start</h1>
+          <p>This can a start of Good Vibes</p>
         </div>
         <div className="frm-body">
           {!loading ? (
@@ -46,9 +45,9 @@ const Register = () => {
       </div>
       <div className="lgin-foot">
         <div className="txt-w-btn">
-          {translate('Want to go back ?')}{' '}
+          Want to go back ?
           <Link className="btn-outlined" to="/">
-            {translate('Back')}
+            Back
           </Link>
         </div>
       </div>

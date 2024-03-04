@@ -16,13 +16,13 @@ const CategoryItem = ({ itm, idx }) => {
         <p>{itm?.catDesc}</p>
         <div className="actions">
           <Link className='grn'>
-            <i className="material-icons">edit</i> Edit
+            <i className="material-icons notranslate">edit</i> Edit
           </Link>
           <Link className='rd'>
-            <i className="material-icons">delete</i> Delete
+            <i className="material-icons notranslate">delete</i> Delete
           </Link>
           <Link to={`/sub-categories/${itm?._id}`} state={{ category: itm }} className='bl'>
-            View <i className="material-icons">keyboard_arrow_right</i>
+            View <i className="material-icons notranslate">keyboard_arrow_right</i>
           </Link>
         </div>
       </div>

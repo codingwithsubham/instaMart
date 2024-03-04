@@ -1,5 +1,4 @@
 import React from 'react';
-import { translate } from '../../../language/lang';
 import { useDispatch } from 'react-redux';
 import { userLogout } from '../../../store/auth/authEffect';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -12,8 +11,8 @@ const NavHead = ({ callback, openSideNav }) => {
     <div className="nav-wrapper">
       <Link to="#" className="brand-logo">
         <div className="idfy app-logo">
-          {translate('insta')}
-          <b>{translate('mart')}</b>
+          insta
+          <b>Mart</b>
         </div>
       </Link>
       {pathname === '/home' ? (
@@ -23,7 +22,7 @@ const NavHead = ({ callback, openSideNav }) => {
           className="sidenav-trigger"
           onClick={() => callback(!openSideNav)}
         >
-          <i className="material-icons">menu</i>
+          <i className="material-icons notranslate">menu</i>
         </Link>
       ) : (
         <Link
@@ -32,7 +31,7 @@ const NavHead = ({ callback, openSideNav }) => {
           className="sidenav-trigger"
           onClick={() => navigate(-1)}
         >
-          <i className="material-icons">arrow_back</i>
+          <i className="material-icons notranslate">arrow_back</i>
         </Link>
       )}
       <Link
@@ -40,7 +39,7 @@ const NavHead = ({ callback, openSideNav }) => {
         data-target="mobile-demo"
         className="notifications sidenav-trigger"
       >
-        <i className="material-icons">notifications</i>
+        <i className="material-icons notranslate">notifications</i>
       </Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>

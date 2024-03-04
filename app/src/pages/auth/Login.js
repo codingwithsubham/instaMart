@@ -5,7 +5,7 @@ import { loginFormData } from './options';
 import { useDispatch, useSelector } from 'react-redux';
 import { userLogin } from '../../store/auth/authEffect';
 import Loader from '../../components/layout/Loader';
-import { translate } from '../../language/lang';
+import LangElem from '../../language/LangElem';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -21,13 +21,13 @@ const Login = () => {
   return (
     <div className="login-wrap">
       <div className="idfy">
-      {translate('insta')}
-        <b>{translate('mart')}</b>
+        insta
+        <b>Mart</b>
       </div>
       <div className="form-holder insta-an">
         <div className="frm-hdr">
-          <h1>{translate('Welcome Back')}</h1>
-          <p>{translate("Login to your Account")}</p>
+          <h1>Welcome Back</h1>
+          <p>Login to your Account</p>
         </div>
 
         <div className="frm-body">
@@ -37,12 +37,13 @@ const Login = () => {
             <Loader />
           )}
         </div>
+        <LangElem className="lgin-page" />
       </div>
       <div className="lgin-foot">
         <div className="txt-w-btn">
-          {translate("Want to go back ?")}{' '}
+          Want to go back ?
           <Link className="btn-outlined" to="/">
-            {translate("Back")}
+            Back
           </Link>
         </div>
       </div>

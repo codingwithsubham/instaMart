@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'instaBn';
+  src: local('instaBn'), url('./font/ben.ttf') format('truetype');
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +12,8 @@ html {
 }
 
 .font-bn {
-  font-family: 'Tiro Bangla', serif;
+  font-family: 'instaBn';
+  letter-spacing: 0.5px;
 }
 
 .App {
@@ -1194,7 +1200,7 @@ h1 {
 
 .lang-wrap.float-fixed-left {
   position: fixed;
-  bottom: -10px;
+  bottom: 2px;
   z-index: 9999999;
 }
 
@@ -1572,14 +1578,20 @@ p.nrml-price b {
 }
 
 button.btn.add-to-cart {
-  min-width: 60px;
-  width: 77%;
-  background: #fff;
-  color: #4caf50 !important;
-  font-weight: 600;
-  border-radius: 4px;
-  border: 2px solid #4caf50;
-  min-height: 20px;
+  max-width: 30px;
+  min-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  line-height: 30px;
+  background: #4caf50;
+}
+
+.font-bn .shp-prdct h1 {
+  height: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  font-size: 15px;
 }
 
 .add-to-cart-wrap {
@@ -1625,14 +1637,14 @@ button.btn.add-to-cart {
 }
 
 .sub-cat-tggl-itm h5 {
-  font-size: 9px;
+  font-size: 12px;
   margin: 0px;
   text-align: center;
   width: 80px;
   font-weight: 600;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   overflow: hidden;
   color: #1a1a1a;
 }
@@ -1693,6 +1705,12 @@ button.btn.add-to-cart {
 
 .Masala.\&.Oil {
   background-image: url('./static/others/masala_bg.jpg');
+}
+
+.lang-wrap select.goog-te-combo {
+  display: block;
+  border-bottom: 1px solid #000000;
+  border-radius: 4px;
 }
 
 @media only screen and (min-width: 768px) {
