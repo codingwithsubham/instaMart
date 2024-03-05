@@ -1251,6 +1251,15 @@ p {
   cursor: pointer;
 }
 
+.rd-bg {
+  background: #F44336 !important;
+  color: #fff;
+}
+
+.grn-bg {
+  background-color: #4CAF50;
+}
+
 .add-cat-wrap {
   background: #f1f1f1;
   padding: 10px;
@@ -1589,7 +1598,6 @@ button.btn.add-to-cart {
   min-height: 30px;
   max-height: 30px;
   line-height: 30px;
-  background: #4caf50;
 }
 
 .font-bn .shp-prdct h1 {
@@ -1785,6 +1793,22 @@ button.btn.add-to-cart {
 
 .footer-copy b {
   color: #4CAF50;
+}
+
+.my-cart {
+  padding: 10px 5px;
+}
+
+.my-cart .img-lbl {
+  background: #2196F3;
+}
+
+.my-cart img.shop-prdct {
+  border-color: #03A9F4;
+}
+
+.btn.fw {
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {

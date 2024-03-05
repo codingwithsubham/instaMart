@@ -16,7 +16,7 @@ const Categories = () => {
     <div className="cat-holder">
       {categories?.map((itm, idx) => (
         <Link
-          to={'/home/shop-by-category'}
+          to={'/home/shop-bct'}
           state={{ category: itm }}
           className="cat-itm-home"
           key={idx}

@@ -13,6 +13,7 @@ import Entry from '../pages/entry/Entry';
 import Search from '../pages/search/Search';
 import Products from '../pages/admin/products/Products';
 import ShopByCategory from '../pages/shop/ShopByCategory';
+import Cart from '../pages/cart/Cart';
 
 const AppRoutes = () => {
   return (
@@ -21,30 +22,18 @@ const AppRoutes = () => {
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/register" element={<Register />} />
+
         <Route exact path="/entry" element={<PrivateRoute component={Entry} />} />
         <Route exact path="/home" element={<PrivateRoute component={Home} />} />
         <Route exact path="/search" element={<PrivateRoute component={Search} />} />
-        <Route exact path="/home/shop-by-category" element={<PrivateRoute component={ShopByCategory} />} />
-        <Route
-          exact
-          path="/dashboard"
-          element={<PRAdmin component={Dashboard} />}
-        />
-        <Route
-          exact
-          path="/categories"
-          element={<PRAdmin component={Categories} />}
-        />
-        <Route
-          exact
-          path="/sub-categories/:id"
-          element={<PRAdmin component={SubCategories} />}
-        />
-        <Route
-          exact
-          path="/products"
-          element={<PRAdmin component={Products} />}
-        />
+        <Route exact path="/cart" element={<PrivateRoute component={Cart} />} />
+        <Route exact path="/home/shop-bct" element={<PrivateRoute component={ShopByCategory} />} />
+
+        <Route exact path="/dashboard" element={<PRAdmin component={Dashboard} />} />
+        <Route exact path="/categories" element={<PRAdmin component={Categories} />} />
+        <Route exact path="/sub-categories/:id" element={<PRAdmin component={SubCategories} />} />
+        <Route exact path="/products" element={<PRAdmin component={Products} />} />
+        
         <Route path="*" element={<Fragment />} />
       </Routes>
     </div>

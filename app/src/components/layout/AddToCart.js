@@ -21,14 +21,14 @@ const AddToCart = ({ product }) => {
       {filterData?.length ? (
         <div className="cart-controler">
           <button
-            className="btn add-to-cart"
+            className="btn add-to-cart grn-bg"
             onClick={() => dispatch(removeFromBag({ product }))}
           >
             <i className="material-icons notranslate">remove</i>
           </button>
           <div className="counter">{filterData?.length}</div>
           <button
-            className="btn add-to-cart"
+            className="btn add-to-cart grn-bg"
             onClick={() => dispatch(addToBag({ product }))}
           >
             <i className="material-icons notranslate">add</i>

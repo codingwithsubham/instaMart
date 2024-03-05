@@ -16,3 +16,6 @@ function setCookie(name, value, days) {
   }
   document.cookie = name + '=' + (value || '') + expires + '; path=/';
 }
+
+export const uniq = (arr, track = new Set()) =>
+arr.filter(({ _id }) => (track.has(_id) ? false : track.add(_id)));
