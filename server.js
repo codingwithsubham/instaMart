@@ -12,6 +12,7 @@ app.use('/api/v1/auth', require('./route/auth'));
 app.use('/api/v1/uploads', require('./route/uploads'));
 app.use('/api/v1/category', require('./route/category'));
 app.use('/api/v1/product', require('./route/product'));
+app.use('/api/v1/cart', require('./route/cart'));
 
 
 app.use(express.static('app/build'));

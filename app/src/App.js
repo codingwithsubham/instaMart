@@ -9,6 +9,8 @@ import Alert from './components/layout/Alert';
 import { loadUser } from './store/auth/authEffect';
 import Navbar from './components/layout/nav/Navbar';
 import { getLocation } from './utils/geoLocation';
+import MyBag from './components/layout/MyBag';
+import Footer from './components/layout/Footer';
 // import { connectSocket } from './utils/connectSocket';
 
 function App() {
@@ -36,7 +38,9 @@ function App() {
               <ScrollToTop />
               <Alert />
               <Navbar />
+              <MyBag />
               <AppRoutes />
+              <Footer />
             </div>
           </div>
         </Fragment>

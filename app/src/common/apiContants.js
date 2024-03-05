@@ -22,5 +22,8 @@ module.exports = {
   ADD_PRODUCT: '/product/add',
   GET_PRODUCT: '/product',
   BY_CATEGORY: '/category/',
-  BY_SUB_CATEGORY: '/sub-category/'
+  BY_SUB_CATEGORY: '/sub-category/',
+  ADD_TO_CART: '/cart/add',
+  REMOVE_FROM_CART: '/cart/remove',
+  GET_CART: '/cart',
 };

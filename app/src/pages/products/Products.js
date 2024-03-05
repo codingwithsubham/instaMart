@@ -1,6 +1,7 @@
 import React from 'react';
 import Loader from '../../components/layout/Loader';
 import { getImagebyid } from '../../utils/imagebuilder';
+import AddToCart from '../../components/layout/AddToCart';
 
 const ProductItem = ({ itm }) => {
   return (
@@ -15,6 +16,7 @@ const ProductItem = ({ itm }) => {
       </div>
       <div className="shp-prdct col s8 m8 l8">
         <h1>{itm?.prodName}</h1>
+        <p>{itm?.qty}</p>
         <div className="row prdct-btm">
           <div className="col s7 m7 l7">
             {itm?.sellPrice && <p className="offer-price">₹{itm?.sellPrice}</p>}
@@ -28,11 +30,7 @@ const ProductItem = ({ itm }) => {
               % OFF
             </p>
           </div>
-          <div className="col s5 m5 l5 add-to-cart-wrap">
-            <button className="btn add-to-cart notranslate">
-              <i className="material-icons notranslate">add</i>
-            </button>
-          </div>
+          <AddToCart product={itm} />
         </div>
       </div>
     </div>

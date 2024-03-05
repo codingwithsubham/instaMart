@@ -1,5 +1,5 @@
 export const handleLanguageChange = () => {
-  if (localStorage.getItem('lang') === 'en') {
+  if (localStorage.getItem('lang') === 'en' || !localStorage.getItem('lang')) {
     setCookie('googtrans', `/en/bn`, 1);
   } else {
     setCookie('googtrans', `/en/en`, 1);
