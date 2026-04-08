@@ -9,11 +9,11 @@ connectDB();
 app.use(express.json({ extended: false }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 app.use('/api/v1/auth', require('./route/auth'));
+// added comments for test
 app.use('/api/v1/uploads', require('./route/uploads'));
 app.use('/api/v1/category', require('./route/category'));
 app.use('/api/v1/product', require('./route/product'));
 app.use('/api/v1/cart', require('./route/cart'));
-
 
 app.use(express.static('app/build'));
 app.get('*', (req, res) => {
